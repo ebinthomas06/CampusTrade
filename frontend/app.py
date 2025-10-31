@@ -39,21 +39,19 @@ with st.sidebar:
     
     if 'user' in st.session_state:
         st.subheader(f"Welcome, {st.session_state['user']['username']}!")
-        # --- Use your actual filenames ---
-        st.page_link("pages/3_Post_Item.py", label="Post New Item", icon="➕")
-        st.page_link("pages/4_My_Items.py", label="My Items", icon="📦")
-        st.page_link("pages/5_Conversation.py", label="Conversations", icon="💬") # <-- FIX
+        
+        # --- NO MORE MANUAL PAGE LINKS HERE ---
+        # The pages are already listed at the top.
         
         if st.button("Logout", use_container_width=True):
             logout()
     else:
         st.subheader("Welcome, Guest!")
-        # --- Use your actual filenames ---
-        st.page_link("pages/1_Login.py", label="Login", icon="➡️")
-        st.page_link("pages/2_Register.py", label="Register", icon="👤")
+        # The Login/Register pages are already in the top list.
     
     st.divider()
     search_query = st.text_input("Search items...")
+    
 # --- Main Content Area ---
 st.header("Items For Sale")
 
