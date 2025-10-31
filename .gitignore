@@ -1,0 +1,13 @@
+# Python / Django
+venv/
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Secrets
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+.DS_Store
